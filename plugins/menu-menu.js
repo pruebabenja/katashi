@@ -176,7 +176,7 @@ ${margen}
 
 ${margen}
 
-> ✨ *INFORMACIÓN DEL USUARIO* ✨
+> ✨ *INFORMACIÓN DEL USUARIO GAGA* ✨
 
 *❰❰ Tipo de registro ❱❱*
 ➺ ${user.registered === true ? `_${user.registroC === true ? '🗂️ Registro Completo' : '📑 Registro Rápido'}_` : '❌ _Sin registro_'}
