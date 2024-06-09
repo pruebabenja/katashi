@@ -149,90 +149,159 @@ let menu = `${lenguajeGB['smsConfi2']()} *${user.genero === 0 ? '👤' : user.ge
 > *_${formatDate}_*
 > \`${nombreLugar} - ${ciudad}\`
 
-${margen}
+==================
 
-> 🌟 *INFORMACIÓN GENERAL* 🌟 
+┏━━━━━━━━━━━━━━━━┓
+┣ *𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍* ┫
+┣ﾠﾠ*𝐂𝐘𝐁𝐄𝐑𝐍𝐄𝐓𝐈𝐂*ﾠﾠ┫
+┣ﾠﾠﾠﾠ*𝐒𝐎𝐂𝐈𝐄𝐓𝐘*ﾠﾠﾠﾠ┫
+┗━━━━━━━━━━━━━━━━┛
+┏━━━━━━━━━━━━━━━━┓
+┣ *🧾𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐀𝐃𝐎𝐒*
+┣ﾠﾠ\`\`\`${rtotalreg}/${totalreg}\`\`\`
+┣ﾠ*⌛𝐓𝐈𝐄𝐌𝐏𝐎 𝐀𝐂𝐓𝐈𝐕𝐎*
+┣ﾠ\`\`\`${uptime}\`\`\`
+┣ﾠ*⚙𝐌𝐎𝐃𝐎*
+┣ﾠPublico
+┣ﾠ*🔒𝐂𝐇𝐀𝐓𝐒 𝐁𝐋𝐎𝐐𝐔𝐄𝐀𝐃𝐎𝐒*
+┣ﾠ\`\`\`${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}\`\`\`
+┣ﾠ*🔒𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒 𝐁𝐋𝐎𝐐𝐔𝐄𝐀𝐃𝐎𝐒*
+┣ﾠ\`\`\`${Object.entries(global.db.data.users).filter(user => user[1].banned).length}\`\`\`
+┗━━━━━━━━━━━━━━━━┛  
 
-*❰❰ ${lenguajeGB['smsTotalUsers']()} ❱❱* 
-➺ \`\`\`${Object.keys(global.db.data.users).length}\`\`\`
+==================
 
-*❰❰ Registrados ❱❱* 
-➺ \`\`\`${rtotalreg}/${totalreg}\`\`\`    
+┏━━━━━━━━━━━━━━━━┓
+┣ *𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍* ┫
+┣ﾠﾠﾠﾠﾠﾠ*𝐃𝐄𝐋*ﾠﾠﾠﾠﾠﾠ┫
+┣ﾠﾠﾠﾠ*𝐔𝐒𝐔𝐀𝐑𝐈𝐎*ﾠﾠﾠﾠ┫
+┗━━━━━━━━━━━━━━━━┛
+┏━━━━━━━━━━━━━━━━┓
+┣ *🧾𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐀𝐃𝐎*
+┣ﾠﾠ${user.registered === true ? '✅ Verificado' : '❌ *Establecer registro usando:* _' + usedPrefix + 'verificar_'}
+┣ﾠ*♦𝐍𝐈𝐕𝐄𝐋*
+┣ﾠ${emoji} \`${user.exp - min}/${xp}\`
+┣ﾠ*♦𝐑𝐀𝐍𝐆𝐎*
+┣ﾠ${role}
+┣ﾠ*💏𝐏𝐀𝐑𝐄𝐉𝐀*
+┣ﾠ${pareja ? `${name} 💕 ${conn.getName(pareja)}` : `🛐 ${lenguajeGB['smsResultPareja']()}`}
+┗━━━━━━━━━━━━━━━━┛  
 
-*❰❰ ${lenguajeGB['smsUptime']()} ❱❱* 
-➺ \`\`\`${uptime}\`\`\`
+==================
 
-*❰❰ ${lenguajeGB['smsVersion']()} ❱❱* 
-➺ \`\`\`${vs}\`\`\`
+┏━━━━━━━━━━━━━━━━┓
+┣ *𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍* ┫
+┗━━━━━━━━━━━━━━━━┛
+┏━━━━━━━━━━━━━━━━┓
+┣ *🪙𝐃𝐎𝐍𝐀𝐂𝐈𝐎𝐍*
+┣ﾠﾠ.donar
+┣ﾠ*🔖𝐆𝐑𝐔𝐏𝐎𝐒 𝐎𝐅𝐂*
+┣ﾠ.grupos
+┣ﾠ*👤𝐂𝐑𝐄𝐀𝐃𝐎𝐑*
+┣ﾠ.owner
+┣ﾠ*💹𝐈𝐍𝐅𝐎 𝐃𝐄 𝐇𝐎𝐒𝐓*
+┣ﾠ.host
+┗━━━━━━━━━━━━━━━━┛  
 
-*❰❰ ${lenguajeGB['smsMode']()} ❱❱* 
-➺ \`${global.opts['self'] ? `${lenguajeGB['smsModePrivate']().charAt(0).toUpperCase() + lenguajeGB['smsModePrivate']().slice(1).toLowerCase()}` : `${lenguajeGB['smsModePublic']().charAt(0).toUpperCase() + lenguajeGB['smsModePublic']().slice(1).toLowerCase()}`}\`
+==================
 
-*❰❰ ${lenguajeGB['smsBanChats']()} ❱❱* 
-➺ \`\`\`${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}\`\`\`
+┏━━━━━━━━━━━━━━━━┓
+┣  *𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒*  ┫
+┣     *𝐒𝐔𝐁*     ┫
+┣     *𝐁𝐎𝐓*     ┫
+┗━━━━━━━━━━━━━━━━┛
+┏━━━━━━━━━━━━━━━━┓
+┣ *⚙𝐄𝐋𝐈𝐌𝐈𝐍𝐀𝐑 𝐒𝐄𝐒𝐈𝐎𝐍*
+┣ﾠﾠ.borrarsesion
+┣ﾠ*⚙𝐂𝐎𝐃𝐈𝐆𝐎 𝟖 𝐃𝐈𝐆𝐈𝐓𝐎𝐒*
+┣ﾠ.serbot--code
+┣ﾠ*⚙𝐂𝐎𝐃𝐈𝐆𝐎 𝐐𝐑*
+┣ﾠ.serbot
+┣ﾠ*⚙𝐃𝐄𝐓𝐄𝐍𝐄𝐑 𝐓𝐄𝐌𝐏𝐎𝐑𝐀𝐋𝐌𝐄𝐍𝐓𝐄*
+┣ﾠ.detener
+┣ﾠ*⚙𝐋𝐈𝐒𝐓𝐀 𝐃𝐄 𝐒𝐔𝐁 𝐁𝐎𝐓𝐒*
+┣ﾠ.bots
+┗━━━━━━━━━━━━━━━━┛ 
 
-*❰❰ ${lenguajeGB['smsBanUsers']()} ❱❱* 
-➺ \`\`\`${Object.entries(global.db.data.users).filter(user => user[1].banned).length}\`\`\`
+==================
 
-${margen}
+┏━━━━━━━━━━━━━━━━┓
+┣  *𝐑𝐄𝐏𝐎𝐑𝐓𝐀𝐑*   ┫
+┣   *𝐄𝐑𝐑𝐎𝐑𝐄𝐒*   ┫
+┗━━━━━━━━━━━━━━━━┛
+┏━━━━━━━━━━━━━━━━┓
+┣ *⚙𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒 𝐒𝐈𝐍 𝐅𝐔𝐍𝐂𝐈𝐎𝐍𝐀𝐑*
+┣ﾠﾠ.reporte + texto
+┗━━━━━━━━━━━━━━━━┛
 
-> ✨ *INFORMACIÓN DEL USUARIO GAGA* ✨
+==================
 
-*❰❰ Tipo de registro ❱❱*
-➺ ${user.registered === true ? `_${user.registroC === true ? '🗂️ Registro Completo' : '📑 Registro Rápido'}_` : '❌ _Sin registro_'}
+┏━━━━━━━━━━━━━━━━┓
+┣     *𝐒𝐄𝐑*      ┫
+┣   *𝐔𝐒𝐔𝐀𝐑𝐈𝐎*    ┫
+┣     *𝐕𝐈𝐏*      ┫
+┗━━━━━━━━━━━━━━━━┛
+┏━━━━━━━━━━━━━━━━┓
+┣ *𝐀𝐃𝐐𝐔𝐈𝐑𝐈𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌*
+┣ﾠﾠ.pase premium
+┣ﾠ*𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒 𝐏𝐑𝐄𝐌𝐈𝐔𝐌*
+┣ﾠ.listapremium
+┣ﾠ*𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒 𝐓𝐄𝐌𝐏𝐎𝐑𝐀𝐋𝐄𝐒 𝐏𝐑𝐄𝐌𝐈𝐔𝐌*
+┣ﾠ.listavip
+┗━━━━━━━━━━━━━━━━┛ 
 
-*❰❰ Mi estado ❱❱*
-➺ ${typeof user.miestado !== 'string' ? '❌ *Establecer usando:* _' + usedPrefix + 'miestado_' : '_Me siento ' + user.miestado + '_'}
+==================
 
-*❰❰ Registrado ❱❱*
-➺ ${user.registered === true ? '✅ Verificado' : '❌ *Establecer registro usando:* _' + usedPrefix + 'verificar_'}
+┏━━━━━━━━━━━━━━━━┓
+┣    *𝐉𝐔𝐄𝐆𝐎𝐒*    ┫
+┗━━━━━━━━━━━━━━━━┛
+┏━━━━━━━━━━━┓
+┣ ${prefix}toplind@s
+┣ ${prefix}toplagrasa
+┣ ${prefix}topintegrantes
+┣ ${prefix}toppajer@s
+┣ ${prefix}topotakus
+┣ ${prefix}topgays
+┣ ${prefix}delttt
+┣ ${prefix}ttt
+┣ ${prefix}ppt
+┣ ${prefix}lanzar
+┣ ${prefix}matematicas
+┣ ${prefix}topput@s
+┣ ${prefix}toppanafrescos
+┣ ${prefix}topshiposters
+┣ ${prefix}topfamosos
+┣ ${prefix}topparejas
+┣ ${prefix}gay
+┣ ${prefix}gay2
+┣ ${prefix}lesbiana
+┣ ${prefix}manca
+┣ ${prefix}manco
+┣ ${prefix}pajero
+┣ ${prefix}pajera
+┣ ${prefix}puto
+┣ ${prefix}puta
+┣ ${prefix}rata
+┣ ${prefix}love
+┣ ${prefix}doxxear
+┣ ${prefix}pregunta
+┣ ${prefix}apostar
+┣ ${prefix}formarpareja
+┣ ${prefix}dado
+┣ ${prefix}piropo
+┣ ${prefix}chiste
+┣ ${prefix}reto
+┣ ${prefix}frases
+┣ ${prefix}acertijo
+┣ ${prefix}cancion
+┣ ${prefix}trivia
+┣ ${prefix}pelicula
+┣ ${prefix}adivinanza
+┣ ${prefix}ruleta
+┣ ${prefix}ruletadelban
+┗━━━━━━━━━━━┛
 
-*❰❰ ${lenguajeGB['smsBotonM7']().charAt(0).toUpperCase() + lenguajeGB['smsBotonM7']().slice(1).toLowerCase()} ❱❱* 
-➺ ${user.premiumTime > 0 ? '✅ Eres usuario Premium' : '❌ *Establecer Premium:* _' + usedPrefix + 'pase premium_'}
-
-*❰❰ ${lenguajeGB['smsBotonM5']().charAt(0).toUpperCase() + lenguajeGB['smsBotonM5']().slice(1).toLowerCase()} ❱❱* 
-➺ ${role}
-
-*❰❰ ${lenguajeGB['smsBotonM6']().charAt(0).toUpperCase() + lenguajeGB['smsBotonM6']().slice(1).toLowerCase()} ❱❱*
-➺ ${emoji} \`${user.exp - min}/${xp}\`
-
-*❰❰ ${lenguajeGB['smsPareja']()} ❱❱*
-➺ ${pareja ? `${name} 💕 ${conn.getName(pareja)}` : `🛐 ${lenguajeGB['smsResultPareja']()}`}
-
-*❰❰ Pasatiempo(s) ❱❱* 
-➺ ${user.pasatiempo === 0 ? '*Sin Registro*' : user.pasatiempo + '\n'}
-
-${margen}
-
-> 💫 *INFORMACIÓN* 💫\n
-${generateCommand(commandsInfo, usedPrefix)}
-
-${margen}
-
-> 💻 *COMANDOS - SUB BOT*\n
-${generateCommand(commandsJadiBot, usedPrefix)}
-
-${margen}
-
-> 🆘 *REPORTAR COMANDOS* 🆘\n
-${generateCommand(commandsReport, usedPrefix)}
-
-${margen}
-
-> 🪅 *KATASHIBOT TEMPORAL* 🪅\n
-${generateCommand(commandsLink, usedPrefix)}
-
-${margen}
-
-> 🎟️ *SER PREMIUM* 🎟️\n
-${generateCommand(commandsPrem, usedPrefix)}
-
-${margen}
-
-> 🎡 *JUEGOS* 🎡\n
-${generateCommand(commandsGames, usedPrefix)}
-
-${margen}
+==================
 
 > ✨ *IA* ✨\n
 ${generateCommand(commandsAI, usedPrefix)}
